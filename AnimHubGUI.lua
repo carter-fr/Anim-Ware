@@ -190,7 +190,14 @@ game.Players.LocalPlayer.Character.Animate.fall.FallAnim.AnimationId = "http://w
 game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 AnimationsSection:NewButton("Knight", "Changes your animation to knight.", function()
-    print("Clicked")
+game.Players.LocalPlayer.Character.Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=657595757"
+game.Players.LocalPlayer.Character.Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=657568135"
+game.Players.LocalPlayer.Character.Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=657552124"
+game.Players.LocalPlayer.Character.Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=657564596"
+game.Players.LocalPlayer.Character.Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=658409194"
+game.Players.LocalPlayer.Character.Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=658360781"
+game.Players.LocalPlayer.Character.Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=657600338"
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 AnimationsSection:NewButton("Zombie", "Changes your animation to zombie.", function()
 game.Players.LocalPlayer.Character.Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616158929"
