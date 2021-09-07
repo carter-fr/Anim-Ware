@@ -5,7 +5,7 @@ Icon = "";
 Duration = 4;
 })
 
-local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vQqxB0G1"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/carter-fr/AnimHub/main/DraggableKavoUI.lua"))()
     local Window = Library.CreateLib("AnimHub", "DarkTheme")
 
     -- ANIMATIONS
