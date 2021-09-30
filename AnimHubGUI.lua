@@ -10,7 +10,7 @@ Duration = 4;
 })
 -- real script starts here.
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/carter-fr/AnimHub/main/DraggableKavoUI.lua"))()
-    local Window = Library.CreateLib("AnimHub", "DarkTheme")
+    local Window = Library.CreateLib("AnimHub", "BloodTheme")
 
     -- ANIMATIONS
     local Animations = Window:NewTab("Animations")
