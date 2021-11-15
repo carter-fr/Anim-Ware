@@ -9,8 +9,8 @@ Text = "thank for the support";
 Icon = ""; 
 Duration = 4;
 })
--- real script starts here.
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/carter-fr/AnimHub/main/DraggableKavoUI.lua"))()
+wait()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/carter-fr/BetterKavo/main/BetterKavo.lua"))()
     local Window = Library.CreateLib("AnimHub", "BloodTheme")
 
     -- ANIMATIONS
