@@ -2,7 +2,6 @@ if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R
 game.StarterGui:SetCore("SendNotification", {
 Title = "Game not supported.";
 Text = "R15 only!";
-Icon = ""; 
 Duration = 3;
 })
 else
