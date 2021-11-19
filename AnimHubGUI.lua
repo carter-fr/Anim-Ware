@@ -303,5 +303,18 @@ end)
     local DetailsSection = Details:NewSection("Details")
     
     DetailsSection:NewLabel("Made by carterfr#9709")
+    DetailsSection:NewLabel("Right Control to toggle the UI.")
         DetailsSection:NewLabel("No further updates will be made.")
+     DetailsSection:NewButton("Rejoin", "Rejoin your current server!", function()
+            game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+        end)
+    
+     DetailsSection:NewButton("Server Hop", "Join a different server!", function()
+            local Servers = game.HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
+        for i,v in pairs(Servers.data) do
+    		if v.playing ~= v.maxPlayers then
+    			game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, v.id)
+    		end
+    	end
+        end)
 end
