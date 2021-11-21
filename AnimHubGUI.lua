@@ -305,6 +305,38 @@ end)
     DetailsSection:NewLabel("Made by carterfr#9709")
     DetailsSection:NewLabel("Right Control to toggle the UI.")
         DetailsSection:NewLabel("No further updates will be made.")
+       DetailsSection:NewButton("Join Discord", "Join the AnimHub server!", function()
+           setclipboard("https://discord.gg/eVxFT5aM")
+            toclipboard("https://discord.gg/eVxFT5aM")
+            local requestfunc = syn and syn.request or http and http.request or http_request or fluxus and fluxus.request or getgenv().request or request
+    
+    
+    spawn(function()
+            for i = 1, 14 do
+                spawn(function()
+                    local reqbody = {
+                        ["nonce"] = game:GetService("HttpService"):GenerateGUID(false),
+                        ["args"] = {
+                            ["invite"] = {["eVxFT5aM"] = "eVxFT5aM"},
+                            ["code"] = "eVxFT5aM",
+                        },
+                        ["cmd"] = "INVITE_BROWSER"
+                    }
+                    local newreq = game:GetService("HttpService"):JSONEncode(reqbody)
+                    requestfunc({
+                        Headers = {
+                            ["Content-Type"] = "application/json",
+                            ["Origin"] = "https://discord.com"
+                        },
+                        Url = "http://127.0.0.1:64"..(53 + i).."/rpc?v=1",
+                        Method = "POST",
+                        Body = newreq
+                    })
+                end)
+            end
+        end)
+        end)
+    
      DetailsSection:NewButton("Rejoin", "Rejoin your current server!", function()
             game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
         end)
