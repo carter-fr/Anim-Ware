@@ -10,4 +10,4 @@ _G.Theme = "Serpent"
 |__/  |__/|__/  |__/|__/|__/ |__/ |__/|__/  |__/ \______/ |_______/ 
 ]]
 -- AnimHub by carterfr#9709, skid all you want.
-loadstring(game:HttpGet("https://raw.githubusercontent.com/carter-fr/AnimHub/main/Anim-Ware.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/carter-fr/Anim-Ware/main/Anim-Ware.lua"))()
