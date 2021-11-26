@@ -308,33 +308,24 @@ end)
        DetailsSection:NewButton("Join Discord", "Join the Anim-Ware server!", function()
            setclipboard("https://discord.gg/eVxFT5aM")
             toclipboard("https://discord.gg/eVxFT5aM")
-            local requestfunc = syn and syn.request or http and http.request or http_request or fluxus and fluxus.request or getgenv().request or request
-    
-    
-    spawn(function()
-            for i = 1, 14 do
-                spawn(function()
-                    local reqbody = {
-                        ["nonce"] = game:GetService("HttpService"):GenerateGUID(false),
-                        ["args"] = {
-                            ["invite"] = {["eVxFT5aM"] = "eVxFT5aM"},
-                            ["code"] = "eVxFT5aM",
-                        },
-                        ["cmd"] = "INVITE_BROWSER"
-                    }
-                    local newreq = game:GetService("HttpService"):JSONEncode(reqbody)
-                    requestfunc({
-                        Headers = {
-                            ["Content-Type"] = "application/json",
-                            ["Origin"] = "https://discord.com"
-                        },
-                        Url = "http://127.0.0.1:64"..(53 + i).."/rpc?v=1",
-                        Method = "POST",
-                        Body = newreq
-                    })
-                end)
-            end
-        end)
+           local invite = "eVxFT5aM"
+local http = game:GetService('HttpService')
+local req = (syn and syn.request) or (http and http.request) or http_request
+	if req then
+		req({
+			Url = 'http://127.0.0.1:6463/rpc?v=1',
+			Method = 'POST',
+			Headers = {
+				['Content-Type'] = 'application/json',
+				Origin = 'https://discord.com'
+			},
+			Body = http:JSONEncode({
+				cmd = 'INVITE_BROWSER',
+				nonce = http:GenerateGUID(false),
+				args = {code = invite}
+			})
+		})
+	end
         end)
     
      DetailsSection:NewButton("Rejoin", "Rejoin your current server!", function()
