@@ -308,24 +308,13 @@ end)
        DetailsSection:NewButton("Join Discord", "Join the Anim-Ware server!", function()
            setclipboard("https://discord.gg/eVxFT5aM")
             toclipboard("https://discord.gg/eVxFT5aM")
-           local invite = "eVxFT5aM"
-local http = game:GetService('HttpService')
-local req = (syn and syn.request) or (http and http.request) or http_request
-	if req then
-		req({
-			Url = 'http://127.0.0.1:6463/rpc?v=1',
-			Method = 'POST',
-			Headers = {
-				['Content-Type'] = 'application/json',
-				Origin = 'https://discord.com'
-			},
-			Body = http:JSONEncode({
-				cmd = 'INVITE_BROWSER',
-				nonce = http:GenerateGUID(false),
-				args = {code = invite}
-			})
-		})
-	end
+ local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Random-Scripts/main/Discord%20Invite%20Module/Module.lua"))()
+
+Module.Prompt({
+    ServerName = "Anim-Ware",
+    InviteCode = "discord.gg/eVxFT5aM",
+    ServerIcon = "http://www.roblox.com/asset/?id=8107250855",
+})
         end)
     
      DetailsSection:NewButton("Rejoin", "Rejoin your current server!", function()
