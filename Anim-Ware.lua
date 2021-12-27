@@ -305,18 +305,6 @@ end)
     DetailsSection:NewLabel("Made by carterfr#9709")
     DetailsSection:NewLabel("Right Control to toggle the UI.")
         DetailsSection:NewLabel("No further updates will be made.")
-      DetailsSection:NewButton("Join Discord", "Join the Anim-Ware server!", function()
- local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Random-Scripts/main/Discord%20Invite%20Module/Module.lua"))()
-
-Module.Prompt({
-    ServerName = "Anim-Ware",
-    InviteCode = "discord.gg/eVxFT5aM",
-    ServerIcon = "http://www.roblox.com/asset/?id=8107250855",
-})
-            setclipboard("https://discord.gg/eVxFT5aM")
-            toclipboard("https://discord.gg/eVxFT5aM")
-        end)
-    
      DetailsSection:NewButton("Rejoin", "Rejoin your current server!", function()
             game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
         end)
