@@ -6,8 +6,6 @@ Text = "R15 only!";
 Duration = 3;
 })
 else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/carter-fr/Anim-Ware/game-fix/fix.lua")()
-		wait()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/carter-fr/Anim-Ware/game-fix/AnimKavo.lua"))()
     local Window = Library.CreateLib("Anim-Ware", _G.Theme)
 
