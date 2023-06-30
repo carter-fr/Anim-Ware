@@ -298,7 +298,7 @@ end)
     local Details = Window:NewTab("Details")
     local DetailsSection = Details:NewSection("Details")
     
-    DetailsSection:NewLabel("Made by carterfr#9709")
+    DetailsSection:NewLabel("Made by .carterfr on Discord")
     DetailsSection:NewLabel("Right Control to toggle the UI.")
         DetailsSection:NewLabel("No further updates will be made.")
      DetailsSection:NewButton("Rejoin", "Rejoin your current server!", function()
